@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from 'react';
 import QuietAreaForm from '../../components/QuietAreaForm';
 import Map from '../../components/Map';
