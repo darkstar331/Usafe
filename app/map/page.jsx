@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
-import QuietAreaForm from '../../components/QuietAreaForm';
-import Map from '../../components/Map';
+import QuietAreaForm from '../components/QuietAreaForm';
+import Map from '../components/Map';
 import axios from 'axios';
 
 export default function MapPage() {
