@@ -12,7 +12,7 @@ export default function MapPage() {
     // Fetch all tagged locations when the component mounts
     const fetchTags = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/map');
+        const response = await axios.get(`${process.env.NEXTAUTH_URL}/api/map`);
         if (response.status === 200) {
           setTaggedLocations(response.data.data);
         } else {
