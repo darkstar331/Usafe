@@ -51,7 +51,7 @@ function QuietAreaForm({ onSubmit }) {
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="mt-2 p-3 block w-full border border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none text-black"
+          className="mt-2 p-3 block w/full border border-gray-600 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none text-black"
           placeholder="Enter a brief description"
           required
         />

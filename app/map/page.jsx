@@ -1,15 +1,19 @@
 'use client'
+import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 import QuietAreaForm from '../components/QuietAreaForm';
-import Map from '../components/Map';
 import axios from 'axios';
+
+// Dynamically import the Map component with SSR disabled
+const Map = dynamic(() => import('../components/Map'), {
+  ssr: false,
+});
 
 export default function MapPage() {
   const [taggedLocations, setTaggedLocations] = useState([]);
   const [userLocation, setUserLocation] = useState(null);
 
   useEffect(() => {
-    // Fetch all tagged locations when the component mounts
     const fetchTags = async () => {
       try {
         const response = await axios.get(`${process.env.NEXTAUTH_URL}/api/map`);
@@ -25,8 +29,7 @@ export default function MapPage() {
 
     fetchTags();
 
-    // Optionally fetch the user's current location
-    if (navigator.geolocation) {
+    if (typeof window !== 'undefined' && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           setUserLocation({
