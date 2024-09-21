@@ -45,7 +45,7 @@ export default function Home() {
               </div>
               <h2 className="text-2xl font-bold text-yellow-400 mb-2">Campus Map</h2>
               <p className="text-gray-300">
-                Navigate the campus easily with our interactive campus map.
+                Navigate the campus easily and Find quiet Study areas for study or chilling
               </p>
             </div>
           </Link>
