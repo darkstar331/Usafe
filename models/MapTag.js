@@ -20,7 +20,6 @@ const mapTagSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-    expires: '24h', // Automatically remove after 24 hours
   },
 });
 
